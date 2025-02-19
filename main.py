@@ -1,6 +1,5 @@
 import psycopg2
 import  pandas as pd
-from sqlalchemy import create_engine
 your_database_name="postgres"
 your_username="postgres"
 your_password="password"
