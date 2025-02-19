@@ -1,0 +1,19 @@
+C:\Users\user\AppData\Local\Programs\Python\Python310\python.exe C:\Users\user\PycharmProjects\dz25\main.py
+C:\Users\user\PycharmProjects\dz25\main.py:66: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+     id            city     district  ... year_built      price             type
+0     3          Казань        Центр  ...       2015  3000000.0  вторичное жильё
+1     4    Екатеринбург  Центральный  ...       2019  4500000.0      новостройка
+2     6       Челябинск  Центральный  ...       2017  4000000.0  вторичное жильё
+3     7  Ростов-на-Дону  Центральный  ...       2016  3500000.0  вторичное жильё
+4     9       Волгоград  Центральный  ...       2013  4200000.0  вторичное жильё
+..  ...             ...          ...  ...        ...        ...              ...
+60  123          Казань        Центр  ...       2015  3000000.0  вторичное жильё
+61  124    Екатеринбург  Центральный  ...       2019  4500000.0      новостройка
+62  126       Челябинск  Центральный  ...       2017  4000000.0  вторичное жильё
+63  127  Ростов-на-Дону  Центральный  ...       2016  3500000.0  вторичное жильё
+64  129       Волгоград  Центральный  ...       2013  4200000.0  вторичное жильё
+
+[65 rows x 10 columns]
+
+Process finished with exit code 0
