@@ -1,10 +1,14 @@
 import psycopg2
-
+import  pandas as pd
+from sqlalchemy import create_engine
+your_database_name="postgres"
+your_username="postgres"
+your_password="password"
 # Подключение к базе данных
 conn = psycopg2.connect(
-    dbname="your_database_name",
-    user="your_username",
-    password="your_password",
+    dbname=your_database_name,
+    user=your_username,
+    password=your_password,
     host="localhost",
     port="5432"
 )
@@ -52,3 +56,14 @@ cur.executemany('''
 conn.commit()
 cur.close()
 conn.close()
+# Создание подключения к базе данных через SQLAlchemy
+conn = psycopg2.connect("host='{}' port='{}' dbname='{}' user='{}' password={}".format('localhost', 5432, your_database_name, your_username, your_password))
+
+
+
+# Выполнение SQL-запроса и получение данных в виде DataFrame
+query = "SELECT * FROM apartments WHERE price < 5000000"
+df = pd.read_sql(query, conn)
+
+# Вывод полученных данных
+print(df)
